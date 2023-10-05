@@ -1,0 +1,31 @@
+/* Reset CSS untuk menghilangkan margin dan padding default */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling header */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Styling h1 di header */
+h1 {
+    font-size: 36px;
+}
+
+/* Styling main content */
+main {
+    padding: 20px;
+}
+
+/* Styling footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
