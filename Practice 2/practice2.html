@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contoh Form HTML</title>
+</head>
+<body>
+    <h1>Form Identitas</h1>
+    <form action="proses.php" method="post">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Masukkan alamat email Anda" required>
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+
+        <label for="jenis-kelamin">Jenis Kelamin:</label>
+        <input type="radio" id="laki-laki" name="jenis-kelamin" value="Laki-laki">
+        <label for="laki-laki">Laki-laki</label>
+        <input type="radio" id="perempuan" name="jenis-kelamin" value="Perempuan">
+        <label for="perempuan">Perempuan</label>
+        <br><br>
+
+        <label for="hobi">Hobi:</label>
+        <input type="checkbox" id="membaca" name="hobi" value="Membaca">
+        <label for="membaca">Membaca</label>
+        <input type="checkbox" id="berenang" name="hobi" value="Berenang">
+        <label for="berenang">Berenang</label>
+        <input type="checkbox" id="olahraga" name="hobi" value="Olahraga">
+        <label for="olahraga">Olahraga</label>
+        <br><br>
+
+        <label for="kota">Kota Asal:</label>
+        <select id="kota" name="kota">
+            <option value="Jakarta">Jakarta</option>
+            <option value="Surabaya">Surabaya</option>
+            <option value="Bandung">Bandung</option>
+            <option value="Yogyakarta">Yogyakarta</option>
+        </select>
+        <br><br>
+
+        <label for="pesan">Pesan:</label>
+        <textarea id="pesan" name="pesan" rows="4" cols="50" placeholder="Tulis pesan Anda"></textarea>
+        <br><br>
+
+        <input type="submit" value="Kirim">
+    </form>
+</body>
+</html>
