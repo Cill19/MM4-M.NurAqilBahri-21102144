@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<body>
+ <h2>HTML Forms</h2>
+ <form action="/action_page.php">
+ <label for="fname">First name:</label><br>
+ <input type="text" id="fname" name="fname" value="John"><br>
+ <label for="lname">Last name:</label><br>
+ <input type="text" id="lname" name="lname" value="Doe" readonly><br>
+ <label for="lname">Data:</label><br>
+ <input type="text" id="lname" name="ldata" value="None" disabled><br>
+ <label for="lname">Age:</label><br>
+ <input type="number" id="lname" name="lage" required><br>
+ <label for="lname">Select :</label><br>
+ <select id="cars" name="cars">
+ <option value="volvo">Volvo</option>
+ <option value="saab">Saab</option>
+ <option value="fiat">Fiat</option>
+ <option value="audi">Audi</option>
+ </select><br>
+ <label for="lname">Multiple :</label><br>
+ <select name="cars" size="4" multiple>
+ <option value="volvo">Volvo</option>
+ <option value="saab">Saab</option>
+ <option value="fiat">Fiat</option>
+ <option value="audi">Audi</option>
+ </select><br>
+ <label for="lname">Gender :</label><br>
+ <input type="radio" id="male" name="gender" value="male">
+ <label for="male">Male</label><br>
+ <input type="radio" id="female" name="gender" value="female">
+ <label for="female">Female</label><br>
+ <input type="radio" id="other" name="gender" value="other">
+ <label for="other">Other</label><br>
+ <label for="lname">Choose :</label><br>
+ <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+ <label for="vehicle1"> I have a bike</label><br>
+ <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+ <label for="vehicle2"> I have a car</label><br>
+ <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+ <label for="vehicle3"> I have a boat</label><br>
+ <label for="lname">Text Area :</label><br>
+<textarea name="message" rows="10" cols="30">
+The cat was playing in the garden.
+ </textarea><br>
+ <label for="favcolor">Select your favorite color:</label><br>
+ <input type="color" id="favcolor" name="favcolor"><br>
+ <label for="birthday">Birthday:</label><br>
+ <input type="date" id="birthday" name="birthday"><br>
+ <label for="email">Enter your email:</label><br>
+ <input type="email" id="email" name="email"><br>
+
+ <label for="myfile">Select a file:</label><br>
+ <input type="file" id="myfile" name="myfile">
+
+ <input type="submit" value="Submit"><br>
+ </form>
+ <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+</body>
+</html>
