@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="ripple-background">
+        <div class="circle xxlarge shade1"></div>
+        <div class="circle xlarge shade2"></div>
+        <div class="circle large shade3"></div>
+        <div class="circle medium shade4"></div>
+        <div class="circle small shade5"></div>
+    </div>
+    <div class="container">
+        <h1>My To-Do List</h1>
+        <div class="input-container">
+            <input type="text" id="task" placeholder="Tambahkan tugas...">
+            <button id="addTaskButton" onclick="addTask()">Tambah</button>
+        </div>
+        <ul id="taskList">
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
