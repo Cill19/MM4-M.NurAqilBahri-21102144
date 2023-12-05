@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="assets/img/favicon.png">
+        <title>Album example for Bootstrap</title>
+        <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <header>
+          <div class="collapse bg-dark" id="navbarHeader">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-8 col-md-7 py-4">
+                  <h4 class="text-white">About</h4>
+                  <p class="textmuted">
+                    Add some information about the album below, the author, or any
+                    other background context. Make it a few s entences long so folks
+                    can pick up some informative tidbits. Then, link them off to
+                    some social networking sites or co ntact information.
+                  </p>
+                </div>
+                <div class="col-sm-4 offset-md-1 py-4">
+                  <h4 class="text-white">Contact</h4>
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                    <li><a href="#" class="text-white">Like on Facebook</a></li>
+                    <li><a href="#" class="text-white">Email me</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="navbar navbar-dark bg-dark box-shadow">
+            <div class="container d-flex justify-content-between">
+              <a href="#" class="navbar-brand d-flex align-items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="mr- 2"
+                >
+                  <path
+                    d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"
+                  ></path>
+                  <circle cx="12" cy="13" r="4"></circle>
+                </svg>
+                <strong>Album</strong>
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarHeader"
+                ariacontrols="navbarHeader"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </div>
+        </header>
+    
+        <main role="main">
+          <section class="jumbotron text-center">
+            <div class="container">
+              <h1 class="jumbotron-heading" id="title-page">Album example</h1>
+              <p class="lead text-muted">
+                Something short and leading about the collection below— its
+                contents, the creator, etc. Make it short and sweet, but not too
+                short so folks don't simply skip over it entirely.
+              </p>
+              <p>
+                <a
+                  href="#"
+                  class="btn btn-success my-2"
+                  onClick="callInputModal('AddQuote')"
+                  >AddQuote</a
+                >
+                <a
+                  href="#"
+                  class="btn btn-primary my-2"
+                  onClick="getQuotes('https://quotesbeta.tugaskelas.my.id/index.php/quotes/q/my_quote/21102145','My Quotes')"
+                  >My Quotes</a
+                >
+                <a
+                  href="#"
+                  class="btn btn-primary my-2"
+                  onClick="getQuotes('https://quotesbeta.tugaskelas.my.id/index.php/quotes/q/class_id/10','Class Quotes')"
+                  >Class Quotes</a
+                >
+                <a
+                  href="#"
+                  class="btn btn-primary my-2"
+                  onClick="getQuotes('https://quotesbeta.tugaskelas.my.id/index.php/quotes','All Quotes')"
+                  >All Quotes</a
+                >
+              </p>
+            </div>
+          </section>
+          <div class="album py-5 bg-light">
+            <div class="container">
+              <h1 class="jumbotron-heading" id="title-page"></h1>
+              <div class="row" id="quote-items">
+                <div
+                  class="col-md-4 quote-item"
+                  style="display: none"
+                  id="quote-item"
+                >
+                  <div class="card mb-4 box-shadow">
+                    <img
+                      class="card-img-top"
+                      id="card-img"
+                      src="assets/img/no_image.jpg"
+                      alt="Card image cap"
+                    />
+                    <div class="card-body">
+                      <b class="card-title" id="card-title">Title</b><br />
+                      <small class="text-muted" id="card-name">Nama</small>
+                      <p class="card-text" id="card-description">
+                        This is a wider card with supporting text below as a natural
+                        lead-in to additional content. This content is a little bit
+                        longer.
+                      </p>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <div class="btn-group">
+                          <button
+                            type="button"
+                            id="view-detail"
+                            class="btn btn-sm btn-outline-secondary"
+                          >
+                            View
+                          </button>
+                          <button type="button"id="edit-detail" class="btn btn-sm btn-outline-primary">Edit</button>
+                          <button type="button"id="delete-quote" class="btn btn-sm btn-outline-danger">Delete</button>
+                        </div>
+                        <small class="text-muted" id="card-date">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+    
+        <footer class="text-muted">
+          <div class="container">
+            <p class="float-right">
+              <a href="#">Back to top</a>
+            </p>
+            <p>
+              Album example is &copy; Bootstrap, but please download and customize
+              it for yourself!
+            </p>
+            <p>
+              New to Bootstrap? <a href="../../">Visit the homepage</a> or read our
+              <a href="../../gettingstarted/">getting started guide</a>.
+            </p>
+          </div>
+        </footer>
+    
+        <div
+          class="modal fade"
+          id="quoteInputModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="quoteInputModal"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modal-input-title">Modal title</h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form id="modal-input-form" enctype="multipart/form-data">
+                  <input
+                    type="hidden"
+                    class="form-control"
+                    id="modal-input-form-quote-id"
+                    name="quote_id"
+                  />
+                  <input
+                    type="hidden"
+                    class="form-control"
+                    id="modal-input-form-student-id"
+                    name="student_id"
+                  />
+                  <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Title</label>
+                    <div class="col-sm-10">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="modal-input-form-title"
+                        placeholder="Title.."
+                        name="title"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Description</label>
+                    <div class="col-sm-10">
+                      <textarea
+                        class="form-control"
+                        id="modal-input-form-description"
+                        rows="5"
+                        placeholder="Description..."
+                        name="description"
+                        required
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Image</label>
+                    <div class="col-sm-10">
+                      <input
+                        type="file"
+                        name="imagename"
+                        class="form-control-file"
+                        id="modal-input-form-image"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                      <img class="card-img-top" id="modal-input-show-img" />
+                    </div>
+                  </div>
+    
+                  <div class="modal-footer">
+                    <button
+                      type="submit"
+                      id="modal-input-form-submit"
+                      class="btn btn-primary"
+                    >
+                      Save
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+                      Cancel
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="quoteDetailModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="quoteDetailLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modal-title">Modal title</h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <img
+                    class="card-img-top"
+                    src="assets/img/no_image.jpg"
+                    id="modal-img"
+                    alt="Card image cap"
+                  />
+                  <p class="card-text" id="modal-description"></p>
+                  <small class="text-muted" id="modal-name">Nama</small>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <script
+          src="node_modules/jquery/dist/jquery.min.js"
+          crossorigin="anonymous"
+        ></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+        <script>
+          function getQuotes(url, title) {
+            $.ajaxSetup({cache:false});
+            var item = $("#quote-item");
+            $("#title-page").html(title);
+            $(".quote-item").remove();
+            item.appendTo("#quote-items");
+    
+            $.ajax({
+              type: "GET",
+              url: url,
+              beforeSend: function (xhr) {
+                xhr.overrideMimeType("text/plain; charset=x-user-defined");
+              },
+              error: function (xhr, status, error) {
+                console.log(xhr);
+              },
+            }).done(function (data) {
+              myData = JSON.parse(data);
+              for (i = 0; i < myData["quotes"].length; i++) {
+                var item = $("#quote-item").clone();
+                item
+                  .find("#card-description")
+                  .html(
+                    myData["quotes"][i].description
+                      .replace('"', '"')
+                      .replace(/\n/g, "<br />")
+                  );
+                  item.removeAttr("style");
+                  item.find("#card-img").attr("src", myData["quotes"][i].images);
+                  item.find("#card-title").html(myData["quotes"][i].title);
+                  item.find("#card-date").html(myData["quotes"][i].updated);
+                  item
+                    .find("#card-name")
+                    .html(
+                      myData["quotes"][i].name +
+                       " (" +
+                        myData["quotes"][i].class +
+                        ")"
+                        );
+                item
+                  .find("#view-detail")
+                  .attr(
+                    "onClick",
+                    'callModal("' +
+                      myData["quotes"][i].title +
+                      '","' +
+                      myData["quotes"][i].name +
+                      " (" +
+                      myData["quotes"][i].class +
+                      ')","' +
+                      myData["quotes"][i].images +
+                      '","' +
+                      myData["quotes"][i].description
+                        .replace('"', '\\"')
+                        .replace(/(\r\n|\n|\r)/gm, "<br>") +
+                      '")'
+                  );
+                  item
+                  .find("#delete-quote")
+                  .attr(
+                    "onClick",
+                    "deleteQuote(" +
+                      myData["quotes"][i].quote_id +
+                      ",'" +
+                      myData["quotes"][i].title +
+                      "')"
+                  );
+                  item
+                  .find("#edit-detail")
+                  .attr(
+                    "onClick",
+                    'callInputModal("Edit Quote","' +
+                      myData["quotes"][i].title +
+                      '","' +
+                      myData["quotes"][i].description
+                        .replace('"', '\\"')
+                        .replace(/(\r\n|\n|\r)/gm, "<br>") +
+                      '","' +
+                      myData["quotes"][i].images +
+                      '","' +
+                      myData["quotes"][i].quote_id +
+                      '")'
+                  );
+                  if(sessionStorage.getItem("student_id")!=myData['quotes'][i].student_id){
+                    item.find('#edit-detail').attr("style","display:none;");
+                  }
+                item.appendTo("#quote-items");
+              }
+            });
+          }
+          $(document).ready(function () {
+            $("#modal-input-form").submit(function (e) {
+              e.preventDefault();
+              var formData = $(this).serializeArray();
+              if (formData[0].value == "") {
+                insertQuote(this);
+              } else {
+                updateQuote(this);
+              }
+            });
+            sessionStorage.setItem("student_id","1021");
+            sessionStorage.setItem("nim","21102145");
+            getQuotes(
+              " https://quotesbeta.tugaskelas.my.id/index.php/quotes/q/my_quote/" +
+                sessionStorage.getItem("nim"),
+              "My Quotes"
+            );
+          });
+    
+          function callModal(title, name, image, description) {
+            $("#quoteDetailModal").modal("show");
+            $("#modal-title").html(title);
+            $("#modal-name").html(name);
+            $("#modal-description").html(description);
+            $("#modal-img").attr("src", image);
+          }
+    
+          function callInputModal(
+            title,
+            name = "",
+            description = "",
+            image = "",
+            quote_id = ""
+          ) {
+            $("#quoteInputModal").modal("show");
+            $("#modal-input-title").html(title);
+            $("#modal-input-form-quote-id").val(quote_id);
+            $("#modal-input-form-student-id").val(
+              sessionStorage.getItem("student_id")
+            );
+            $("#modal-input-form-title").val(name);
+            $("#modal-input-form-image").val("");
+            $("#modal-input-form-description").val(description);
+            $("#modal-input-show-img").attr("src", image);
+          }
+    
+          function readURL(input) {
+            if (input.files && input.files[0]) {
+              var reader = new FileReader();
+              reader.onload = function (e) {
+                $("#modal-input-show-img").attr("src", e.target.result);
+              };
+              reader.readAsDataURL(input.files[0]);
+            }
+          }
+    
+          $("#modal-input-form-image").change(function () {
+            readURL(this);
+          });
+
+          function newFormData(form) {
+            var formData = new FormData(form);
+            return formData;
+          }
+    
+          function insertQuote(data){
+            $.ajax({
+              type:'POST',
+              url:"https://quotesbeta.tugaskelas.my.id/index.php/quotes",
+              dataType:"JSON",
+              data:newFormData(data),
+              processData:false,
+              contentType:false,
+              beforeSend:function(xhr){
+                xhr.overrideMimeType("text/plain;charset=x-user-defined");
+              },
+              error:function(xhr,status,error){
+                console.log(xhr);
+              }
+            })
+            .done(function(data){
+              console.log(data);
+              getQuotes('https://quotesbeta.tugaskelas.my.id/index.php/quotes/q/my_quote/'+sessionStorage.getItem("nim"),'MyQuotes');
+              $('#quoteInputModal').modal('toggle');
+            });
+          }
+          
+          function updateQuote(data){
+            console.log(data);
+            $.ajax({
+              type:'POST',
+              url:"https://quotesbeta.tugaskelas.my.id/index.php/quotes/q/edit/1",
+              dataType:"JSON",
+              data:newFormData(data),
+              processData:false,
+              contentType:false,
+              beforeSend:function(xhr){
+                xhr.overrideMimeType("text/plain;charset=x-user-defined");
+              },
+              error:function(xhr,status,error){
+                console.log(xhr);
+              }
+            })
+            .done(function(data){
+              console.log(data);
+              getQuotes('https://quotesbeta.tugaskelas.my.id/index.php/quotes/q/my_quote/'+sessionStorage.getItem("nim"),'MyQuotes');
+              $('#quoteInputModal').modal('toggle');
+            });
+          }
+    
+          function deleteQuote(quote_id,title){
+            var r=confirm("Delete"+title+"?");
+            if(r==true){
+              $.ajax({
+                type:'DELETE',
+                url:"https://quotesbeta.tugaskelas.my.id/index.php/quotes/q/quote_id/"+quote_id,
+                beforeSend:function(xhr){
+                  xhr.overrideMimeType("text/plain;charset=x-user-defined");
+                },
+                error:function(xhr,status,error){
+                  console.log(xhr);
+                }
+              })
+              .done(function(data){
+                console.log(data);
+                getQuotes('https://quotesbeta.tugaskelas.my.id/index.php/quotes/q/my_quote/'+sessionStorage.getItem("nim"),'MyQuotes');
+              });
+            }
+          }
+        </script>
+      </body>
+    </html>
+    
