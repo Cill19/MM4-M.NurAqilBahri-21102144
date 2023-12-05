@@ -4,4 +4,5 @@ here's links to those practice web:
 - practice 2: 
 - practice 3: https://vercel.com/m-nur-aqil-bahris-projects/mm-4-m-nur-aqil-bahri-21102144
 - practice 4: https://vercel.com/m-nur-aqil-bahris-projects/mm-4-m-nur-aqil-bahri-21102144-jv79
-- practice 6: https://vercel.com/m-nur-aqil-bahris-projects/mm-4-m-nur-aqil-bahri-21102144-ractice6 -> maaf bngt pak, ini khusus practice 6 pas di hosting ke vercel malah jadinya kaya gitu, padahal di run baik baik aja
+- practice 6: https://practice6aqilbahri.000webhostapp.com/#
+- practice 7: https://practice7aqilbahri21102144.000webhostapp.com/
